@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventHorizonAI Contact</title>
+  <link rel="stylesheet" href="static/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="contact">
+  <!-- Background image layer -->
+  <div class="background-layer"></div>
+
+  <!-- Page content -->
+  <div class="content-wrapper">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Email: <a href="mailto:example@example.com" style="color: lightblue;">john@example.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+        <p>Or reach out to us through our social media channels.</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Fade-in script -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const bgLayer = document.querySelector('.background-layer');
+      const contentWrapper = document.querySelector('.content-wrapper');
+
+      // Determine the correct background image based on body class
+      let bgImageSrc = '';
+      if (document.body.classList.contains('home')) {
+        bgImageSrc = 'backgrounds/BH.png';
+      } else {
+        bgImageSrc = 'backgrounds/space.png';
+      }
+
+      // Preload the background image
+      const bgImage = new Image();
+      bgImage.src = bgImageSrc;
+
+      bgImage.onload = () => {
+        // Background is ready; apply visible class
+        if (bgLayer) bgLayer.classList.add('visible');
+
+        // Fade in content shortly after
+        setTimeout(() => {
+          if (contentWrapper) contentWrapper.classList.add('visible');
+        }, 10000); // Optional shorter delay
+      };
+
+      // Fallback if image doesn't load after 3 seconds
+      setTimeout(() => {
+        if (!bgLayer.classList.contains('visible')) {
+          bgLayer.classList.add('visible');
+          contentWrapper.classList.add('visible');
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

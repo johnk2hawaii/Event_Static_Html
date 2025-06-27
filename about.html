@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body class="about">
+  <div class="background-layer"></div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="content-wrapper">
+    <section class="about-container">
+      <img class="profile-pic" src="static/profile.jpg" alt="Profile Picture" />
+      <div class="bio-text">
+        <h1>Founder, Cosmic Space Warrior, Traveller, And Heart Breaker</h1>
+        <h2>Dr. John Koblanski</h2>
+        <p>
+          Dr. John Koblanski began his academic journey with a joint major in mathematics and physics and a minor in chemistry, followed by a master’s degree in theoretical physics from the University of Northern British Columbia. After an initial career transition into investment advising,
+            he returned to academia to complete a Ph.D. in particle physics at the University of Hawai‘i,
+            subsequently holding a postdoctoral research position. Throughout his career,
+            spanning both academia and the private sector,
+            Dr. Koblanski has been a pioneer in applying machine learning to fundamental physics.
+            He has authored several highly cited publications in leading scientific journals,
+            contributed to the design and testing of advanced detector systems,
+            and co-founded Ultralytics LLC—now the world’s leading platform for computer vision technologies.
+
+        </p>
+      </div>
+      <div class="logos">
+        <img src="static/stanford.png" />
+        <img src="static/NIST.png" />
+        <img src="static/NGA.png" />
+        <img src="static/DOE.png" />
+        <img src="static/UH.png" />
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const bgLayer = document.querySelector('.background-layer');
+      const contentWrapper = document.querySelector('.content-wrapper');
+
+      // Create dummy image to preload background
+      const bgImage = new Image();
+      bgImage.src = document.body.classList.contains('home')
+        ? 'backgrounds/BH.png'
+        : 'backgrounds/space.png';
+
+      bgImage.onload = () => {
+        if (bgLayer) bgLayer.classList.add('visible');
+        setTimeout(() => {
+          if (contentWrapper) contentWrapper.classList.add('visible');
+        }, 1500);
+      };
+
+      // Optional fallback in case image never loads
+      setTimeout(() => {
+        if (!bgLayer.classList.contains('visible')) {
+          bgLayer.classList.add('visible');
+          contentWrapper.classList.add('visible');
+        }
+      }, 500);
+    });
+  </script>
+</body>
+</html>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHorizonAI Services</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body class="services">
+    <div class="background-layer"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="content-wrapper">
+        
+<div class="mission-banner">
+  <h2>Our Mission</h2>
+  <p>Whether You Are A Start-Up In Need Of Help Launching Your MVP, Or An Enterprise Looking For Intelligent Solutions, We Are Here To Help </p>
+</div>
+<section class="services-container">
+    <h1>Our Services</h1>
+    <div class="service"><img src="static/services2.jpg"><div><h2>State Of The Art License-Free Object Detection Models</h2><p>Crafting bespoke AI strategies...</p></div></div>
+    <div class="service"><img src="static/street.png"><div><h2>Instance Segmentation License-Free Models</h2><p>End-to-end development...</p></div></div>
+    <div class="service"><img src="static/neural_net_changed.png"><div><h2>Data Science & Analytics</h2><p>Integrating cutting-edge AI...</p></div></div>
+    <div class="service"><img src="static/GNN_image.png"><div><h2>Graph Neural Networks</h2><p>Classification & Anomaly Detection...</p></div></div>
+    <div class="service"><img src="static/NEW_GA_MODIFIED.png"><div><h2>Genetic Algorithms</h2><p>Tough Optimization Solutions...</p></div></div>
+    <div class="service"><img src="static/stock_prediction.png"><div><h2>Deep Learning for Market Prediction</h2><p>Integrating cutting-edge AI...</p></div></div>
+    <div class="service"><img src="static/minitimecube.png"><div><h2>Advanced Sensor System R&D</h2><p>Ownable license-free tech...</p></div></div>
+    <div class="service"><img src="static/particle_spray.png"><div><h2>Mathematical & Physical Simulations</h2><p>Integrating cutting-edge AI...</p></div></div>
+</section>
+<div class="mission-banner bottom">
+  <h2>Own Your IP</h2>
+  <p>Empowering You With Ownership Of Cutting-Edge AI</p>
+</div>
+
+    </main>
+     <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const bgLayer = document.querySelector('.background-layer');
+          const contentWrapper = document.querySelector('.content-wrapper');
+
+          // Determine the correct background image based on body class
+          let bgImageSrc = '';
+          if (document.body.classList.contains('home')) {
+            bgImageSrc = 'backgrounds/BH.png';
+          } else {
+            bgImageSrc = 'backgrounds/space.png';
+          }
+
+          // Preload the background image
+          const bgImage = new Image();
+          bgImage.src = bgImageSrc;
+
+          bgImage.onload = () => {
+            // Background is ready; apply visible class
+            if (bgLayer) bgLayer.classList.add('visible');
+
+            // Fade in content shortly after
+            setTimeout(() => {
+              if (contentWrapper) contentWrapper.classList.add('visible');
+            }, 400); // Optional shorter delay
+          };
+
+          // Fallback if image doesn't load after 3 seconds
+          setTimeout(() => {
+            if (!bgLayer.classList.contains('visible')) {
+              bgLayer.classList.add('visible');
+              contentWrapper.classList.add('visible');
+            }
+          }, 800);
+        });
+     </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* Reset & basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0f7fa;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+main {
+    padding: 80px 20px 40px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 30, 50, 0.85);
+    padding: 15px 0;
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0 0 10px #00e5ff;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.navbar a {
+    color: #b2ebf2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #00e5ff;
+}
+.centered-text {
+    text-align: center;
+    margin-top: 150px;
+}
+.centered-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #00e5ff;
+}
+.centered-text p {
+    font-size: 1.2em;
+    color: #b2ebf2;
+}
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(0, 15, 30, 0.7);
+    border-radius: 12px;
+}
+.services-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 0 0 6px #00bcd4;
+}
+.service {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 30, 50, 0.6);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-shadow: 0 0 10px #00e5ff40;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.service h2 {
+    margin: 0;
+    color: #81d4fa;
+}
+.service p {
+    margin-top: 5px;
+    color: #c1f4ff;
+}
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(0, 15, 30, 0.75);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #00e5ff;
+    object-fit: cover;
+}
+.bio-text p {
+    color: #cdeef7;
+    font-size: 1.1em;
+}
+.logos {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logos img {
+    height: 40px;
+    opacity: 0.8;
+    transition: transform 0.3s;
+}
+.logos img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(0, 20, 35, 0.75);
+    border-radius: 10px;
+    text-align: center;
+}
+.contact-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4dd0e1;
+}
+.contact-container p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #b2ebf2;
+}
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .service img {
+        width: 100%;
+        height: auto;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Text box with animation */
+.header-text-box {
+    background: rgba(0, 20, 35, 0.25);
+    padding: 1.5em;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 5em auto;
+    box-shadow: 0 0 3px rgba(0, 20, 35, 0.25);
+    font-family: Aptos, sans-serif;
+}
+
+.mission-banner {
+    background: rgba(0, 30, 60, 0.6);
+    text-align: center;
+    padding: 2em 1em;
+    margin: 2em auto;
+    border-top: 2px solid #00e5ff;
+    border-bottom: 2px solid #00e5ff;
+    box-shadow: 0 0 10px #00e5ff40;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.mission-banner h2 {
+    color: #81d4fa;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 5px #00e5ff;
+}
+
+.mission-banner p {
+    color: #cdeef7;
+    font-size: 1.1em;
+}
+
+.mission-banner.bottom {
+    margin-top: 4em;
+}
+
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 2s ease-in;
+}
+
+.background-layer.visible {
+    opacity: 1;
+}
+
+.content-wrapper {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.content-wrapper.visible {
+    opacity: 1;
+}
+
+/* Assign images per page */
+body.home .background-layer {
+    background-image: url("backgrounds/BH.png");
+    background-position: center -650px;
+}
+
+body.services .background-layer,
+body.about .background-layer,
+body.contact .background-layer {
+    background-image: url("backgrounds/space.png");
+    background-position: center center;
+}
