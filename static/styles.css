@@ -266,7 +266,7 @@ body.contact::before {
 .fade-in {
     opacity: 0;
     transform: translateY(15px);
-    transition: opacity 2s ease, transform 2s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .content-wrapper.visible .fade-in {
@@ -275,16 +275,16 @@ body.contact::before {
 }
 
 .delay-0 {
-    transition-delay: 1.5s;
+    transition-delay: 1.0s;
 }
 .delay-1 {
-    transition-delay: 2.0s;
+    transition-delay: 1.5s;
 }
 .delay-2 {
-    transition-delay: 2.5s;
+    transition-delay: 2.0s;
 }
 .delay-3 {
-    transition-delay: 3.0s;
+    transition-delay: 2.5s;
 }
 
 .team-grid {
