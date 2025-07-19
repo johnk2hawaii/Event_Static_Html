@@ -366,3 +366,67 @@ footer {
   margin: 10px 20px;
   vertical-align: middle;
 }
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 30, 50, 0.85);
+  z-index: 999;
+  box-shadow: 0 0 10px #00e5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo floats left */
+.nav-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo img {
+  height: 100px;
+}
+
+/* Navigation is centered */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #b2ebf2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00e5ff;
+}
+
+
+.logo img {
+  height: 40px;
+  vertical-align: middle;
+}
