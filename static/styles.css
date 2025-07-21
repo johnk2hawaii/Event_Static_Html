@@ -410,6 +410,7 @@ footer {
 
 .nav-links {
   display: flex;
+  align-items: center;  /* ✅ ensures vertical centering */
   gap: 30px;
   list-style: none;
 }
