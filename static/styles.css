@@ -225,6 +225,7 @@ main {
     border-radius: 12px;
     max-width: 600px;
     margin: 5em auto;
+    text-align: center;
     box-shadow: 0 0 3px rgba(0, 20, 35, 0.25);
     /*font-family: Aptos, sans-serif;*/
 }
