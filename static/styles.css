@@ -313,7 +313,14 @@ body.contact .background-layer {
 
 }
 
+body.projects .background-layer {
+    background-image: url("backgrounds/icy_blue.png");
+    background-position: center center;
+
+}
+
 body.services::before,
+body.projects::before,
 body.about::before,
 body.contact::before {
     content: "";
@@ -499,3 +506,30 @@ body {
   padding-right: 20px;
 }
 
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}

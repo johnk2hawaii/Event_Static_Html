@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event Horizon AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
   <link rel="stylesheet" href="static/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
-<body class="home">
-  <!-- Background image layer -->
+<body class="projects">
   <div class="background-layer"></div>
 
-  <!-- Navigation bar -->
   <nav class="navbar">
     <div class="nav-center">
       <ul class="nav-links">
@@ -28,44 +26,54 @@
     </div>
   </nav>
 
-  <!-- Page content -->
-  <div class="content-wrapper">
-    <main>
-      <div class="header-text-box fade-in delay-1">
-        <h1 class="fade-in delay-2" style="border-bottom: 2px solid white; padding-bottom: 10px;">EventHorizonAI</h1>
-        <p class="fade-in delay-3" style="padding-top: 25px; font-family: Verdana, Tahoma, Geneva, sans-serif;">
-          On-Demand Expertise in Data Analytics And Machine Learning For Industry, Start-Ups, And Research Institutions
+  <main class="content-wrapper">
+    <section class="project-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="static/projects/battery_blue.png" alt="NeutrinoNet Project" />
+        <h1>🌌 ClearWaste</h1>
+        <h2>Lithium Battery Detector</h2>
+        <p>
+          Lithium-ion battery fires in waste and recycling facilities
+          in Canada and the US are estimated to cost operators over $1.2 billion USD annually and growing. We have developed
+          advanced novel detector to wipe out this infectious scum from invading our planet's waste streams.
         </p>
       </div>
-    </main>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="static/projects/laptop_in_space.png" alt="AstroSynth Project" />
+        <h1>🧠 AstroSynth</h1>
+        <h2>AI-Generating Code Editor</h2>
+        <p>
+          So hot if we told you about it without prepping your mind your brain would spontaneously explode in a blinding gamma ray burst. Coming soon.
+        </p>
+      </div>
+
+
 
     <footer class="fade-in delay-3">
       <p>© 2025 EventHorizonAI. All rights reserved.</p>
-      <p>EventHorizonAI™ and the EventHorizonAIU logo are trademarks of EventHorizonAI Inc.</p>
+      <p>EventHorizonAI™ and the EventHorizonAI logo are trademarks of EventHorizonAI Inc.</p>
     </footer>
-  </div>
+  </main>
 
-  <!-- Fade-in script -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const bgLayer = document.querySelector('.background-layer');
       const contentWrapper = document.querySelector('.content-wrapper');
 
-      let bgImageSrc = '';
-      if (document.body.classList.contains('home')) {
-        bgImageSrc = 'backgrounds/BH.png';
-      } else {
-        bgImageSrc = 'backgrounds/space.png';
-      }
-
       const bgImage = new Image();
-      bgImage.src = bgImageSrc;
+      bgImage.src = document.body.classList.contains('home')
+        ? 'backgrounds/BH.png'
+        : 'backgrounds/space.png';
 
       bgImage.onload = () => {
         if (bgLayer) bgLayer.classList.add('visible');
         setTimeout(() => {
           if (contentWrapper) contentWrapper.classList.add('visible');
-        }, 3000);
+        }, 1500);
       };
 
       setTimeout(() => {
@@ -73,7 +81,7 @@
           bgLayer.classList.add('visible');
           contentWrapper.classList.add('visible');
         }
-      }, 1200);
+      }, 500);
     });
   </script>
 </body>
