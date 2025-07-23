@@ -199,13 +199,17 @@ main {
     justify-content: flex-start;
   }
   .nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  /* spreads items evenly */
+  gap: 5px !important;
+                         /* reduce gap */
+  padding: 0 5px !important;
+                  /* shrink side padding */
+  margin: 0;
+  list-style: none;
+  flex-wrap: nowrap;               /* prevent wrapping */
+  overflow: hidden;                /* prevent scrollbars */
   }
   .nav-links li {
     margin: 0;
@@ -215,8 +219,10 @@ main {
     padding: 0;
   }
   .nav-links li a {
-    padding: 0;
-    margin: 0;
+  font-size: 0.65em;               /* reduce font size slightly */
+  padding: 4px 8px !important;
+               /* tighter padding */
+  white-space: nowrap;
   }
 }
 
