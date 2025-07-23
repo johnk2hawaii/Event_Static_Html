@@ -437,6 +437,18 @@ footer {
     max-width: 700px;
 }
 
+footer-scroll {
+    position: static;
+    bottom: 10px;
+    left: 20px;
+    font-size: 0.8em;
+    color: rgba(178, 235, 242, 0.4); /* Subtler version of #b2ebf2 */
+    z-index: 10;
+    text-align: left;
+    line-height: 1.4;
+    max-width: 700px;
+}
+
 .logo img {
   height: 40px;
   margin: 10px 20px;
