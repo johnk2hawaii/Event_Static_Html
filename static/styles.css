@@ -185,12 +185,14 @@ main {
     font-size: 1.2em !important;
   }
   .navbar {
+    justify-content: center !important;
     width: 100%;           /* ensure full width */
     padding: 0 15px;       /* consistent padding */
     box-sizing: border-box; /* ensure padding included in width */
     justify-content: flex-start; /* align items to left */
   }
   .nav-center {
+    justify-content: center !important;
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
@@ -201,7 +203,7 @@ main {
   .nav-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  /* spreads items evenly */
+  justify-content: center !important;  /* spreads items evenly */
   gap: 5px !important;
                          /* reduce gap */
   padding: 0 5px !important;
