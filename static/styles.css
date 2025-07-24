@@ -31,13 +31,14 @@ main {
   box-shadow: 0 0 10px #00e5ff;
   display: flex;
   align-items: center;
-  justify-content: flex-start;  /* change from center */
+  justify-content: center;  /* change from center */
   padding: 0 20px;
   box-sizing: border-box;
 }
 
 .nav-center {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   width: 100%;
@@ -152,6 +153,11 @@ main {
     margin: 10px 0;
     color: #b2ebf2;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 @media (max-width: 768px) {
   .service {
     flex-direction: column;
@@ -178,7 +184,7 @@ main {
   }
 
   .service h2 {
-    font-size: 2.0em !important;
+    font-size: 1.5em !important;
   }
 
   .service p {
@@ -210,7 +216,7 @@ main {
                   /* shrink side padding */
   margin: 0;
   list-style: none;
-  flex-wrap: nowrap;               /* prevent wrapping */
+  flex-wrap: wrap; /* allow wrap if needed on very narrow screens */               /* prevent wrapping */
   overflow: hidden;                /* prevent scrollbars */
   }
   .nav-links li {
@@ -488,6 +494,7 @@ footer-scroll {
 
 .nav-links {
   display: flex;
+  justify-content: center;
   align-items: center;  /* ✅ ensures vertical centering */
   gap: 30px;
   list-style: none;
