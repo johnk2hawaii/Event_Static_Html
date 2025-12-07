@@ -308,7 +308,7 @@ html, body {
 /* Assign images per page */
 body.home .background-layer {
     background-image: url("backgrounds/BH.png");
-    background-position: center -650px;
+    background-position: center 60%;
 }
 
 body.services .background-layer{
